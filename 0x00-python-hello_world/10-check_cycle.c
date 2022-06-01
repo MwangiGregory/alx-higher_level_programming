@@ -9,7 +9,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *temp_head = NULL;
 	listint_t *current = list;
-	
+
 	while (current)
 	{
 		temp_head = list;
