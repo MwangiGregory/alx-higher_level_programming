@@ -2,15 +2,19 @@
 
 
 def uppercase(str):
+    s = []
+
     for c in str:
         i = ord(c)
 
-        '#check if uppercase'
         if i in range(65, 91):
-            print("{:c}".format(i), end='')
+            s.append(c)
         elif i in range(97, 123):
             i = i - 32
-            print("{:c}".format(i), end='')
+            s.append(chr(i))
         else:
-            print("{:c}".format(i), end='')
+            s.append(c)
+
+    for ch in s:
+        print("{}".format(ch), end='')
     print()
