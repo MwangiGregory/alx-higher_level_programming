@@ -4,7 +4,7 @@ if __name__ == "__main__":
 
     from sys import argv
 
-    argc = len(argv) - 1  '#only count arguments after script name'
+    argc = len(argv) - 1
 
     if (argc == 0):
         print("{} arguments.".format(argc))
