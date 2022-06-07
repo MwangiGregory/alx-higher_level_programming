@@ -36,6 +36,8 @@ listint_t *reverse_list(listint_t **head)
 int comp_list(listint_t *l1, listint_t *l2)
 {
 	int status = 0;
+	listint_t *temp = l1;
+	listint_t *temp2 = l2;
 
 	while (l1 != NULL)
 	{
@@ -51,6 +53,9 @@ int comp_list(listint_t *l1, listint_t *l2)
 		l1 = l1->next;
 		l2 = l2->next;
 	}
+	while (temp->next)
+		temp = temp->next;
+	temp->next = temp2;
 	return (status);
 }
 
