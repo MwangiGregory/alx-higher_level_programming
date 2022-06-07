@@ -31,6 +31,8 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *fast_pointer = *head;
 	listint_t *slow_pointer = *head;
+	listint_t *head2 = NULL;
+	listint_t *temp = NULL;
 	int i = 0, j = 0;
 
 	while (1)
@@ -41,12 +43,14 @@ int is_palindrome(listint_t **head)
 			break;
 		else
 		{
+			temp = slow_pointer;
 			fast_pointer = fast_pointer->next->next;
 			slow_pointer = slow_pointer->next;
 			i += 2;
 			j++;
 		}
 	}
-	printf("Value of jth node -> %d\n", slow_pointer->next->n);
+	temp->next = NULL;
+	head2 = reverse_list(&slow_pointer);
 	return (i);
 }
