@@ -3,6 +3,8 @@
 
 
 class Square:
+    """Blueprint for a square"""
+
     def __init__(self, size):
         """Initialize the object of Square.
 
