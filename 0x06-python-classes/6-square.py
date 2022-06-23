@@ -42,7 +42,8 @@ class Square:
         try:
             if len(value) == 2:
                 if type(value[0]) == int and type(value[1]) == int:
-                    self.__position = value
+                    if value[0] >= 0 and value[1] >= 0:
+                        self.__position = value
                 else:
                     raise TypeError
             else:
@@ -58,11 +59,12 @@ class Square:
         """prints the square using the # character"""
         if (self.__size == 0):
             print()
-        for y in range(self.__position[1]):
-            print()
-        for row in range(self.__size):
-            for x in range(self.__position[0]):
-                print(" ", end="")
-            for column in range(self.__size):
-                print("#", end="")
-            print()
+        else:
+            for y in range(self.__position[1]):
+                print()
+            for row in range(self.__size):
+                for x in range(self.__position[0]):
+                    print(" ", end="")
+                for column in range(self.__size):
+                    print("#", end="")
+                print()
