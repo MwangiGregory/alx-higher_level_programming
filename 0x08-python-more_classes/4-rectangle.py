@@ -75,5 +75,5 @@ class Rectangle:
     def __repr__(self):
         """Provide string equivalent of Rectangle object"""
 
-        rec = "Rectangle(" + str(self.__width) + "," + str(self.__height) + ")"
+        rec = "Rectangle({}, {})".format(self.__width, self.__height)
         return rec
