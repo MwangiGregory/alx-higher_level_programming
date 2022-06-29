@@ -69,11 +69,12 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return rec_str
         else:
+            st = str(self.print_symbol) * self.__width
             for h in range(self.__height):
                 if self.__height - h == 1:
-                    rec_str += f"{str(self.print_symbol) * self.__width}"
+                    rec_str += "{}".format(st)
                 else:
-                    rec_str += f"{str(self.print_symbol) * self.__width} \n"
+                    rec_str += "{}\n".format(st)
             return rec_str
 
     def __repr__(self):
