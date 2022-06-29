@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-""" 0-rectangle.py """
+"""
+0-rectangle.py
+"""
 
 
 class Rectangle:
     """Defines a rectangular shape"""
 
     def __init__(self, width=0, height=0):
-        """Initialize Rectangle object
-        Args:
-            self.width(int): integer
-            self.height(int): integer
-        """
+        """Initialize Rectangle object"""
         self.width = width
         self.height = height
 
@@ -24,10 +22,11 @@ class Rectangle:
         """Validate then mutate width value"""
 
         if type(value) is not int:
-            raise TypeError('width must be an integer')
-        if value < 0:
-            raise ValueError('width must be >=0')
-        self.__width = value
+            raise TypeError("width must be an integer")
+        elif value < 0:
+            raise ValueError("width must be >=0")
+        else:
+            self.__width = value
 
     @property
     def height(self):
@@ -40,7 +39,8 @@ class Rectangle:
         """Validate and mutate  height value"""
 
         if type(value) is not int:
-            raise TypeError('height must be an integer')
-        if value < 0:
-            raise ValueError('height must be >= 0')
-        self.__height = value
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = value
