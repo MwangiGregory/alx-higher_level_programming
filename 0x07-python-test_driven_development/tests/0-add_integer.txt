@@ -12,6 +12,8 @@ Tests for function add_integer
 -110
 >>> add_integer(-1, -2)
 -3
+>>> add_integer(1.333, 9)
+10
 
 >>> add_integer(None, 20)
 Traceback (most recent call last):
