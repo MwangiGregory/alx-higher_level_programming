@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Definition of function add_integer"""
 
+
 def add_integer(a, b=98):
     """Adds two numbers"""
     if type(a) not in [int, float]:
