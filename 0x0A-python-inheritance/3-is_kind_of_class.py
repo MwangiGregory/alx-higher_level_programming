@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+"""Defines function is_kind_of_class"""
+
+
+def is_kind_of_class(obj, a_class):
+    """
+    Checks if the object is an instance of a class,or
+    if the object obj is an instance of a class that
+    inherited from the specified class
+    """
+
+    if isinstance(obj, a_class):
+        return True
+    else:
+        return False
