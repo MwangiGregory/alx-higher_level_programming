@@ -1,7 +1,10 @@
 Tests for function add_integer
 
 >>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 2)
+3
 
+<<<<<<< HEAD
 >>> add_integer(10)
 108
 >>> add_integer(10, 20)
@@ -15,18 +18,11 @@ Tests for function add_integer
 >>> add_integer(1.333, 9)
 10
 
->>> add_integer(None, 20)
-Traceback (most recent call last):
-TypeError: a must be an integer
-
->>> add_integer(10, "string")
+>>> add_integer(4, "School")
 Traceback (most recent call last):
 TypeError: b must be an integer
 
->>> add_integer("string", 10)
+>>> add_integer(None)
 Traceback (most recent call last):
 TypeError: a must be an integer
 
->>> add_integer(1.3333**10000000, 20)
-Traceback (most recent call last):
-OverflowError: (34, 'Numerical result out of range')
