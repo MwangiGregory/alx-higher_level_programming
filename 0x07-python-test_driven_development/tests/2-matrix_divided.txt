@@ -14,7 +14,7 @@ This are some test cases for function matrix_divided
 
 >>> matrix_divided(matrix, 0)
 Traceback (most recent call last):
-ZeroDivisionError: division by Zero
+ZeroDivisionError: division by zero
 
 >>> matrix_divided(matrix, "greg")
 Traceback (most recent call last):
