@@ -1,0 +1,52 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Python is awesome.Its really fun")
+Python is awesome.
+<BLANKLINE>
+Its really fun
+
+>>> text_indentation("Is python awesome?Ithink it is")
+Is python awesome?
+<BLANKLINE>
+Ithink it is
+
+>>> text_indentation("Write a function that prints a text with 2 new lines after each of these characters: period and question mark")
+Write a function that prints a text with 2 new lines after each of these characters:
+<BLANKLINE>
+period and question mark
+
+>>> text_indentation(".My name is Greg")
+.My name is Greg
+
+>>> text_indentation("My name is Greg.")
+My name is Greg.
+
+>>> text_indentation("What is your name?")
+What is your name?
+
+>>> text_indentation("Greg:")
+Greg:
+
+>>> text_indentation("Greg ? Mwangi")
+Greg ?
+<BLANKLINE>
+Mwangi
+
+>>> text_indentation(" Greg")
+Greg
+
+>>> text_indentation(" Greg Mwangi? ")
+Greg Mwangi?
+<BLANKLINE>
+
+>>> text_indentation(2)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation("Greg", "Mwangi")
+Traceback (most recent call last):
+TypeError: text_indentation() takes 1 positional argument but 2 were given
