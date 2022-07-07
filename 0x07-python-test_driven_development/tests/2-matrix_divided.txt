@@ -1,0 +1,52 @@
+This are some test cases for function matrix_divided
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+
+>>> matrix_divided(matrix, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+>>> matrix_divided(matrix, -2)
+[[-0.5, -1.0, -1.5], [-2.0, -2.5, -3.0]]
+
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by Zero
+
+>>> matrix_divided(matrix, "greg")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+>>> matrix_divided(matrix, [1, 2, 3])
+Traceback (most recent call last):
+TypeError: div must be a number
+
+>>> matrix2 = [
+...     "string",
+...     [1, 2, 4],
+... ]
+
+>>> matrix_divided(matrix2, 11)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> my_tuple = (2, 3, 4)
+>>> matrix_divided(my_tuple, 11)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(float('inf'), 8)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix3 = [
+...     [1, 2],
+...     [4, 5, 6]
+... ]
+
+>>> matrix_divided(matrix3, 11)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
