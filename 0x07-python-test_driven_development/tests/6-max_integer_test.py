@@ -14,6 +14,31 @@ class TestMaxInteger(unittest.TestCase):
         test_list = [1, 2, 3, 4]
         self.assertAlmostEqual(max_integer(test_list), 4)
 
+    def test_max_at_beginning(self):
+        #Test when max value is at the beginning of the list
+        start = [9, 8, 7, 6]
+        self.assertEqual(max_integer(start), 9)
+
+    def test_max_in_the_middle(self):
+        #Test when max value is in the middle of the list
+        middle = [1, 2, 7, 4, 5]
+        self.assertEqual(max_integer(middle), 7)
+
+    def test_with_neg_number(self):
+        #Test when the list argument has negative values
+        neg = [1, 2, -33, 4]
+        self.assertEqual(max_integer(neg), 4)
+
+    def test_only_neg_numbers(self):
+        #Test when the list only has negative numbers
+        neg = [-9, -8, -7, -1]
+        self.assertEqual(max_integer(neg), -1)
+
+    def test_one_element(self):
+        #Test with only one element in the list
+        one = [8]
+        self.assertEqual(max_integer(one), 8)
+
     def test_empty_list(self):
         #Test correct output for an empty list
         empty = []
