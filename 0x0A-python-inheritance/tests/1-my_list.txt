@@ -33,3 +33,10 @@
 >>> print(my_list)
 []
 
+>>> my_list == my_list.print_sorted()
+[2, 4, 7, 9]
+False
+>>> my_list is my_list.print_sorted()
+[2, 4, 7, 9]
+False
+
