@@ -13,12 +13,18 @@ class TestMaxInteger(unittest.TestCase):
         #Test case using list of integers
         test_list = [1, 2, 3, 4]
         self.assertAlmostEqual(max_integer(test_list), 4)
-        test_list = [-1, 23, -54, 8]
-        self.assertAlmostEqual(max_integer(test_list), 23)
-        
-    def test_value(self):
-        """Test if function max_integer raises a TypeError
-        when necessary"""
 
-        test_list = [1, 2, 3, 4]
-        self.assertRaises(TypeError, max_integer, "string")
+    def test_empty_list(self):
+        #Test correct output for an empty list
+        empty = []
+        self.assertEqual(max_integer(empty), None)
+
+    def test_floats(self):
+        #Test a list of float
+        floats = [1.33, -2.45, 9.78, 0.0001]
+        self.assertEqual(max_integer(floats), 9.78)
+
+    def test_string(self):
+        #Test a list of characters
+        chars = "gregory"
+        self.assertEqual(max_integer(chars), 'y')

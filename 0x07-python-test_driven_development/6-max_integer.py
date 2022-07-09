@@ -7,9 +7,6 @@ def max_integer(list=[]):
     """Function to find and return the max integer in a list of integers
         If the list is empty, the function returns None
     """
-    if list is not list:
-        raise TypeError('list must be an integer')
-        return
     if len(list) == 0:
         return None
     result = list[0]
