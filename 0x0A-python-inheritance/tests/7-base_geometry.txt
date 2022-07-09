@@ -1,0 +1,40 @@
+This module defines test different use cases of class BaseGeometry
+
+>>> BG = __import__('7-base_geometry').BaseGeometry
+>>> bg = BG()
+
+It cannot be instantiated with any arguments
+>>> bg = BG(2)
+Traceback (most recent call last):
+TypeError: BaseGeometry() takes no arguments
+
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+>>> bg = BG()
+>>> bg.integer_validator("Greg", 4)
+
+>>> bg = BG()
+>>> bg.integer_validator("Greg", 0)
+Traceback (most recent call last):
+ValueError: Greg must be greater than 0
+
+>>> bg = BG()
+>>> bg.integer_validator("Greg", -3)
+Traceback (most recent call last):
+ValueError: Greg must be greater than 0
+
+>>> bg = BG()
+>>> bg.integer_validator("Greg", "Mwangi")
+Traceback (most recent call last):
+TypeError: Greg must be an integer
+
+>>> bg = BG()
+>>> bg.integer_validator("Greg", "Mwangi", 3)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+>>> bg = BG()
+>>> print(bg) #doctest: +ELLIPSIS
+<7-base_geometry.BaseGeometry object at 0x...>
