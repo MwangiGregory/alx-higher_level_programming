@@ -38,3 +38,24 @@ TypeError: integer_validator() takes 3 positional arguments but 4 were given
 >>> bg = BG()
 >>> print(bg) #doctest: +ELLIPSIS
 <7-base_geometry.BaseGeometry object at 0x...>
+
+>>> bg = BG()
+>>> bg.integer_validator("Greg", (4,))
+Traceback (most recent call last):
+TypeError: Greg must be an integer
+
+>>> bg.integer_validator("Greg", [4])
+Traceback (most recent call last):
+TypeError: Greg must be an integer
+
+>>> bg.integer_validator("Greg", True)
+Traceback (most recent call last):
+TypeError: Greg must be an integer
+
+>>> bg.integer_validator("Greg", (3, 4))
+Traceback (most recent call last):
+TypeError: Greg must be an integer
+
+>>> bg.integer_validator("Greg", None)
+Traceback (most recent call last):
+TypeError: Greg must be an integer
