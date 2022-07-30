@@ -108,3 +108,12 @@ class TestRectangle_y(unittest.TestCase):
     def test_zero_y(self):
         r1 = Rectangle(2, 3, y=0)
         self.assertEqual(r1.y, 0)
+
+
+class TestRectangleArea(unittest.TestCase):
+    """Test function area for correct output"""
+    def test_area(self):
+        r1 = Rectangle(2, 3)
+        r2 = Rectangle(200, 5)
+        self.assertEqual(r1.area(), 6)
+        self.assertEqual(r2.area(), 1000)
