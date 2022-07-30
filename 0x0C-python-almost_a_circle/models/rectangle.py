@@ -15,6 +15,12 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def area(self):
+        """Calculate area of a rectangle onject"""
+        w = self.width
+        l = self.height
+        return w * l
+
     @property
     def width(self):
         return self.__width
