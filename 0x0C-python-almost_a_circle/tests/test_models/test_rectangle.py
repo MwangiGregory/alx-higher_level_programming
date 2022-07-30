@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """This module defines test_cases for objects of class Rectangle"""
 import unittest
 from models.rectangle import Rectangle
