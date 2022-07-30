@@ -5,7 +5,7 @@ from models.rectangle import Rectangle
 
 
 class TestRectangleInstantiation(unittest.TestCase):
-    """Test cases for checking proper instantiation of 
+    """Test cases for checking proper instantiation of
     rectangle objects"""
 
     def test_width_and_height_args(self):
