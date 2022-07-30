@@ -21,6 +21,13 @@ class Rectangle(Base):
         l = self.height
         return w * l
 
+    def display(self):
+        """prints the rectangle shape instance using #"""
+        for i in range(self.height):
+            for j in range(self.width):
+                print("#", end="")
+            print()
+
     @property
     def width(self):
         return self.__width
