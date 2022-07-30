@@ -2,6 +2,7 @@
 """This module defines class Rectangle"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """This class defines a new type Rectangle that
     inherits from base"""
@@ -45,4 +46,3 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         self.__y = y
-
