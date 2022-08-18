@@ -23,10 +23,10 @@ class Rectangle(Base):
         """prints the rectangle shape instance using #
         while also placing the rectangle in the right position
         using the x and y coordinates"""
-        for x in range(self.x):
+        for y in range(self.y):
             print()
         for i in range(self.height):
-            print(" " * self.y, end="")
+            print(" " * self.x, end="")
             print("#" * self.width)
 
     def __str__(self):
