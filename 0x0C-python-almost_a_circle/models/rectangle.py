@@ -36,9 +36,9 @@ class Rectangle(Base):
                    f" - {self.width}/{self.height}"
         return rect_str
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assigns an argument to each variable of rectangle"""
-        if args is not None:
+        if args is not None and len(args) != 0:
             i = 0
             for arg in args:
                 if i == 0:
@@ -53,6 +53,20 @@ class Rectangle(Base):
                 elif i == 4:
                     self.y = arg
                 i += 1
+
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    if value is not None:
+                        self.id = value
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
 
     @property
     def width(self):
