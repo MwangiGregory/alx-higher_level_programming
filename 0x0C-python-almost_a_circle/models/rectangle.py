@@ -20,11 +20,14 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """prints the rectangle shape instance using #"""
-        for i in range(self.height):
-            for j in range(self.width):
-                print("#", end="")
+        """prints the rectangle shape instance using #
+        while also placing the rectangle in the right position
+        using the x and y coordinates"""
+        for x in range(self.x):
             print()
+        for i in range(self.height):
+            print(" " * self.y, end="")
+            print("#" * self.width)
 
     def __str__(self):
         """Returns string representation of a rectangle"""
