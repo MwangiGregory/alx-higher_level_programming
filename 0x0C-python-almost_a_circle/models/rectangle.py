@@ -17,9 +17,7 @@ class Rectangle(Base):
 
     def area(self):
         """Calculate area of a rectangle onject"""
-        w = self.width
-        l = self.height
-        return w * l
+        return self.width * self.height
 
     def display(self):
         """prints the rectangle shape instance using #"""
@@ -27,6 +25,13 @@ class Rectangle(Base):
             for j in range(self.width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """Returns string representation of a rectangle"""
+
+        rect_str = f"[Rectangle] ({self.id}) {self.x}/{self.y}" \
+                   f"- {self.width}/{self.height}"
+        return rect_str
 
     @property
     def width(self):
