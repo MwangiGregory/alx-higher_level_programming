@@ -30,7 +30,7 @@ class Rectangle(Base):
         """Returns string representation of a rectangle"""
 
         rect_str = f"[Rectangle] ({self.id}) {self.x}/{self.y}" \
-                   f"- {self.width}/{self.height}"
+                   f" - {self.width}/{self.height}"
         return rect_str
 
     @property
