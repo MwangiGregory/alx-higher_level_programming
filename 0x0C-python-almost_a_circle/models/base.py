@@ -35,6 +35,13 @@ class Base:
             return list_dicts
 
     @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with attributes already set"""
+        obj = cls(1, 1)  # dummy attributes
+        obj.update(**dictionary)
+        return obj
+
+    @classmethod
     def save_to_file(cls, list_objs):
         """Writes the JSON string representation
         of a list of objects to a file"""
