@@ -31,8 +31,7 @@ class Square(Rectangle):
                     if id is not None:
                         self.id = arg
                 elif i == 1:
-                    self.width = arg
-                    self.height = arg
+                    self.size = arg
                 elif i == 3:
                     self.x = arg
                 elif i == 4:
@@ -45,8 +44,7 @@ class Square(Rectangle):
                     if value is not None:
                         self.id = value
                 elif key == "size":
-                    self.width = value
-                    self.height = value
+                    self.size = arg
                 elif key == "x":
                     self.x = value
                 elif key == "y":
