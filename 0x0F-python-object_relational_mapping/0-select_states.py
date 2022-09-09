@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This script lists all the states from
+database hbtn_0e_0_usa. The script takes 3 arguments:
+mysql username, mysql password and database name
+"""
 
 if __name__ == "__main__":
     import sys
