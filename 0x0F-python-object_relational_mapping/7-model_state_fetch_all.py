@@ -8,10 +8,10 @@ if __name__ == "__main__":
     from sqlalchemy.orm import sessionmaker
     from model_state import Base, State
 
-    username, passwd, database = sys.argv[1:]
-    db_url = f"mysql+mysqldb://{username}:{passwd}\
-               @localhost/{database}"
-    engine = create_engine(db_url, pool_pre_ping=True)
+    username, password, database = sys.argv[1:]
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                           .format(username, password, database),
+                           pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
     print(session)
