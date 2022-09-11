@@ -14,6 +14,5 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    print(session)
     for instance in session.query(State).order_by(State.id):
-        print(f"{instance.id}: {instance.name}")
+        print("{}: {}".format(instance.id, instance.name))
