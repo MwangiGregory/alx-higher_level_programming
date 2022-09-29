@@ -1,5 +1,3 @@
 #!/bin/bash
-# This scipt takes in a URL, sends a request to that
-# URL, and displays the size of the body of the response.
-url="$1"
-curl -s -o /dev/null "${url}" -w %{size_download}"\n"
+# Displays the size of the body of the response.
+curl -s -o /dev/null "$1" -w %{size_download}"\n"
