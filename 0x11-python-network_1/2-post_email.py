@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     url, email = sys.argv[1], sys.argv[2]
     data = {'email': email}
-    data = urlencode(values)
+    data = urlencode(data)
     data = data.encode('ascii')
     req = Request(url, data)
 
