@@ -15,4 +15,4 @@ if __name__ == "__main__":
         status_code = e.code
         print(f"Error code: {status_code}")
     else:
-        print(response.read().decode('utf-8')
+        print(response.read().decode('utf-8'))
