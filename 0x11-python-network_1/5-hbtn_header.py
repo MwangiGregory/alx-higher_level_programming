@@ -5,7 +5,12 @@ of the variable X-Request-Id in the response header"""
 if __name__ == "__main__":
     import requests
     import sys
+    from requests.exceptions import RequestException
 
     url = sys.argv[1]
-    response = requests.get(url)
-    print(response.headers["X-Request-Id"])
+    try:
+        response = requests.get(url)
+    except RequestException as e:
+        print("None")
+    else:
+        print(response.headers.get('X-Request-Id'))
