@@ -1,11 +1,11 @@
 #!/usr/bin/node
 
 const args = process.argv;
-let list = [];
+const list = [];
 
 for (let i = 2; i < args.length; i++) {
-    let num = parseInt(args[i]);
-    list.push(num);
+  const num = parseInt(args[i]);
+  list.push(num);
 }
 
 let largestNum;
