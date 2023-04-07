@@ -1,7 +1,12 @@
 #!/usr/bin/node
 
 const args = process.argv;
-const list = args.map((arg) => parseInt(arg));
+let list = [];
+
+for (let i = 2; i < args.length; i++) {
+    let num = parseInt(args[i]);
+    list.push(num);
+}
 
 let largestNum;
 let secondLargestNum;
@@ -9,8 +14,8 @@ let secondLargestNum;
 if (list.length === 2 || list.length === 3) {
   secondLargestNum = 0;
 } else if (list.length > 3) {
-  for (let i = 2; i < list.length; i++) {
-    if (i === 2) {
+  for (let i = 0; i < list.length; i++) {
+    if (i === 0) {
       largestNum = list[i];
       continue;
     }
