@@ -13,7 +13,9 @@ if __name__ == "__main__":
     )
     cur = db.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE states.name = '{}' ORDER BY states.id ASC"
+        "SELECT * FROM states \
+         WHERE states.name LIKE '{}' \
+         ORDER BY states.id ASC"
         .format(state_name))
 
     for state in cur.fetchall():
