@@ -18,7 +18,8 @@ if __name__ == "__main__":
         WHERE cities.state_id = (
         SELECT states.id
         FROM states
-        WHERE states.name = %s)""", (state_name,)
+        WHERE states.name = %s)
+        ORDER BY cities.id ASC""", (state_name,)
     )
 
     cities = cur.fetchall()
