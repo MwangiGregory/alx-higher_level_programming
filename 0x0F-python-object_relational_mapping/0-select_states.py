@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 # A script that lists all states from the database hbtn_0e_0_usa
+import MySQLdb
+import sys
 
 if __name__ == "__main__":
-
-    import MySQLdb
-    import sys
-
     username, password, db_name = sys.argv[1:]
     db = MySQLdb.connect(host='localhost', user=username,
                          passwd=password, db=db_name, port=3306)
