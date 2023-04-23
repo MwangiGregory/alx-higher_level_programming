@@ -21,4 +21,4 @@ if __name__ == "__main__":
             order_by(State.id).all():
 
         print(f'{state.id}: {state.name}')
-        [print(f'   {city.id}: {city.name}') for city in state.cities]
+        [print(f'\t{city.id}: {city.name}') for city in state.cities]
