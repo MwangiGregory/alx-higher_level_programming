@@ -16,8 +16,8 @@ if __name__ == "__main__":
         for task in tasks:
             temp_dict = {}
             temp_dict["username"] = user.get("username")
-            temp_dict["task"] = task.get("title")
             temp_dict["completed"] = task.get("completed")
+            temp_dict["task"] = task.get("title")
             temp[user.get('id')].append(temp_dict)
 
     with open('todo_all_employees.json', 'w', encoding='utf8') as f:
