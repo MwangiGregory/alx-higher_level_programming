@@ -1,25 +1,21 @@
 #!/usr/bin/node
-
 const request = require('request');
-const url = process.argv[2];
+
+// API URL and character ID
+const apiUrl = process.argv[2];
 const characterId = 18;
 
-request({ url: url, encoding: 'utf-8' }, (err, res, body) => {
-  if (err) console.log(err);
-  let count = 0;
-  const results = JSON.parse(body).results;
-
-  for (let i = 0; i < results.length; i++) {
-    const filmDetails = results[i];
-    const characters = filmDetails.characters;
-
-    for (let j = 0; j < characters.length; j++) {
-      const url = characters[j];
-
-      if (url.endsWith(characterId.toString().concat('/'))) {
-        count++;
-      }
-    }
+// Make the API request
+request(apiUrl, (error, response, body) => {
+  if (error) {
+    console.error(error);
+  } else {
+    const films = JSON.parse(body).results;
+    const numFilmsWithWedge = films.filter((film) => {
+      return film.characters.includes(
+        `https://swapi-api.alx-tools.com/api/people/${characterId}/`
+      );
+    }).length;
+    console.log(`${numFilmsWithWedge}`);
   }
-  console.log(count);
 });
