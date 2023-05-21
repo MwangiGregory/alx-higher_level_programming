@@ -18,5 +18,5 @@ if __name__ == "__main__":
             print(f"{[content.get('id')]} {content.get('name')}")
         else:
             print("No result")
-    except requests.exceptions.JSONDecodeError as e:
+    except ValueError as e:
         print("Not a valid JSON")
