@@ -24,6 +24,6 @@ if __name__ == "__main__":
         for item in data:
             sha = item.get("sha")
             author = item.get("commit").get("author").get("name")
-            print(sha, author)
+            print(f"{sha}: {author}")
     except ValueError as e:
         pass
